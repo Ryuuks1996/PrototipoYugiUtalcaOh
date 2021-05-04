@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "555345987371",
+    "project_id": "yugioh-utalca",
+    "storage_bucket": "yugioh-utalca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:555345987371:android:73e588fadf4149a2ece76e",
+        "android_client_info": {
+          "package_name": "com.utalca.yugioh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "555345987371-ggr4l4b8rk8945p0ukh80kfk3qct7rpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEXVN61uCL4cvkwDCxVdIJuFL4yOaYdnE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "555345987371-ggr4l4b8rk8945p0ukh80kfk3qct7rpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
