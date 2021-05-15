@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.EventSystems;
 using UnityEngine;
 
-public class Dropdown : MonoBehaviour
+public class DropdownUI : MonoBehaviour
 {
     public GameObject tipo_normal;
     public GameObject tipo_mounstruo;
@@ -18,6 +18,9 @@ public class Dropdown : MonoBehaviour
     public GameObject tierra;
     public GameObject viento;
 
+    public List<GameObject> stars;
+
+    public object onValueChanged { get; internal set; }
 
     public void tipo_carta(int i)
     {
@@ -115,5 +118,10 @@ public class Dropdown : MonoBehaviour
             tierra.SetActive(false);
             viento.SetActive(false);
         }
+    }
+
+    public void StarAmount(int i)
+    {
+
     }
 }

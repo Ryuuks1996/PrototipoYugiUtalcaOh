@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     public Text inputFieldNameText;
-
+    public DropdownUI dropdownStar;
     private string name;
     private string type, description;
     private int attack, defense, star;
