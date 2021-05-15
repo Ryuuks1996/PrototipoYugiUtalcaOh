@@ -15,22 +15,23 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (name != null)
-            name = PlayerPrefs.GetString("CardName");
+        name = PlayerPrefs.GetString("CardName");
+        Debug.Log(name);
+        //Debug.Log(name);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-         
+        //name = inputFieldNameText.text;
     }
 
     public void SaveInfo()
     {
-        name = inputFieldNameText.text.ToString();
+        name = inputFieldNameText.text;
         PlayerPrefs.SetString("CardName", name);
     }
 
-    
+
 }
