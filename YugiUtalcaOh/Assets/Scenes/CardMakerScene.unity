@@ -7619,11 +7619,9 @@ MonoBehaviour:
   inputFieldAttackText: {fileID: 847936668}
   inputFieldDefenseText: {fileID: 630141245}
   UI_Card: {fileID: 1164941358}
-  cardImage: {fileID: 0}
-  starImage: {fileID: 0}
-  star: {fileID: 0}
-  image: {fileID: 0}
-  starSprites: []
+  cardImage: {fileID: 1181243614}
+  starImage: {fileID: 2019859613}
+  star: {fileID: 2019859611}
 --- !u!1 &1492975096
 GameObject:
   m_ObjectHideFlags: 0
