@@ -6190,10 +6190,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37394f9610a8c884d8b0f04b6c23c284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdownType: {fileID: 139411560}
   tipo_normal: {fileID: 144063512}
   tipo_mounstruo: {fileID: 1091569815}
   tipo_magico: {fileID: 1718951865}
   tipo_trampa: {fileID: 2125235921}
+  cardTypeCount: 0
   fuego: {fileID: 960829722}
   agua: {fileID: 1603753377}
   divinidad: {fileID: 765150901}
@@ -7779,6 +7781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputFieldNameText: {fileID: 2051276034}
+  UI_Card: {fileID: 1164941358}
 --- !u!1 &1547423669
 GameObject:
   m_ObjectHideFlags: 0

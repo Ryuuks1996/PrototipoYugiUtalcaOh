@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class Card : MonoBehaviour
 {
     public Text inputFieldNameText;
+    public GameObject UI_Card;
 
     private string name;
-    private string type, description;
+    private int type;
     private int attack, defense, star;
 
 
@@ -16,7 +17,9 @@ public class Card : MonoBehaviour
     void Start()
     {
         name = PlayerPrefs.GetString("CardName");
+        type = PlayerPrefs.GetInt("CardType");
         Debug.Log(name);
+        Debug.Log(type);
         //Debug.Log(name);
 
     }
@@ -30,7 +33,9 @@ public class Card : MonoBehaviour
     public void SaveInfo()
     {
         name = inputFieldNameText.text;
+        type = UI_Card.GetComponent<Dropdown_UI_card>().cardTypeCount;
         PlayerPrefs.SetString("CardName", name);
+        PlayerPrefs.SetInt("CardType", type);
     }
 
 

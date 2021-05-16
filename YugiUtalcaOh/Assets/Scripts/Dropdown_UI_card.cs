@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Dropdown_UI_card : MonoBehaviour
 {
+    public GameObject dropdownType;
     public GameObject tipo_normal;
     public GameObject tipo_mounstruo;
     public GameObject tipo_magico;
     public GameObject tipo_trampa;
+    public int cardTypeCount = 0;
 
     public GameObject fuego;
     public GameObject agua;
@@ -35,6 +37,8 @@ public class Dropdown_UI_card : MonoBehaviour
 
     public void tipo_carta(int i)
     {
+        cardTypeCount = i;
+        
         if (i == 0)
         {
             tipo_mounstruo.SetActive(true);
