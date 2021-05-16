@@ -6203,6 +6203,7 @@ MonoBehaviour:
   oscuridad: {fileID: 1192344556}
   tierra: {fileID: 1112895594}
   viento: {fileID: 668435437}
+  cardElementCount: 0
   estrella_1: {fileID: 1998661172}
   estrella_2: {fileID: 452472773}
   estrella_3: {fileID: 710275194}
@@ -6215,6 +6216,7 @@ MonoBehaviour:
   estrella_10: {fileID: 1161652722}
   estrella_11: {fileID: 1378147}
   estrella_12: {fileID: 1396390945}
+  cardStarCount: 0
 --- !u!1 &1181243612
 GameObject:
   m_ObjectHideFlags: 0
@@ -7781,6 +7783,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputFieldNameText: {fileID: 2051276034}
+  inputFieldDescriptionText: {fileID: 2010401012}
+  inputFieldAttackText: {fileID: 847936668}
+  inputFieldDefenseText: {fileID: 630141245}
   UI_Card: {fileID: 1164941358}
 --- !u!1 &1547423669
 GameObject:

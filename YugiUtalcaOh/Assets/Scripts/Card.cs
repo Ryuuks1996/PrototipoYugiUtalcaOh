@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-    public Text inputFieldNameText;
+    public Text inputFieldNameText, inputFieldDescriptionText, inputFieldAttackText, inputFieldDefenseText;
     public GameObject UI_Card;
 
-    private string name;
-    private int type;
-    private int attack, defense, star;
+    private string name, description;
+    private int type, element, starAmount, attack, defense;
+
 
 
     // Start is called before the first frame update
@@ -18,10 +18,12 @@ public class Card : MonoBehaviour
     {
         name = PlayerPrefs.GetString("CardName");
         type = PlayerPrefs.GetInt("CardType");
-        Debug.Log(name);
-        Debug.Log(type);
-        //Debug.Log(name);
-
+        element = PlayerPrefs.GetInt("CardElement");
+        starAmount = PlayerPrefs.GetInt("CardStarAmount");
+        description = PlayerPrefs.GetString("CardDescription");
+        attack = PlayerPrefs.GetInt("CardAttack");
+        defense = PlayerPrefs.GetInt("CardDefense");
+        Debug.Log(attack);
     }
 
     // Update is called once per frame
@@ -34,8 +36,18 @@ public class Card : MonoBehaviour
     {
         name = inputFieldNameText.text;
         type = UI_Card.GetComponent<Dropdown_UI_card>().cardTypeCount;
+        element = UI_Card.GetComponent<Dropdown_UI_card>().cardElementCount;
+        starAmount = UI_Card.GetComponent<Dropdown_UI_card>().cardStarCount;
+        description = inputFieldDescriptionText.text;
+        attack = int.Parse(inputFieldAttackText.text);
+        defense = int.Parse(inputFieldDefenseText.text);
         PlayerPrefs.SetString("CardName", name);
         PlayerPrefs.SetInt("CardType", type);
+        PlayerPrefs.SetInt("CardElement", element);
+        PlayerPrefs.SetInt("CardStarAmount", starAmount);
+        PlayerPrefs.SetString("CardDescription", description);
+        PlayerPrefs.SetInt("CardAttack", attack);
+        PlayerPrefs.SetInt("CardDefense", defense);
     }
 
 

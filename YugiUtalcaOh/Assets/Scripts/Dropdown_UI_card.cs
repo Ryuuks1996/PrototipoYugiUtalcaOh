@@ -19,6 +19,7 @@ public class Dropdown_UI_card : MonoBehaviour
     public GameObject oscuridad;
     public GameObject tierra;
     public GameObject viento;
+    public int cardElementCount = 0;
 
     public GameObject estrella_1;
     public GameObject estrella_2;
@@ -32,6 +33,7 @@ public class Dropdown_UI_card : MonoBehaviour
     public GameObject estrella_10;
     public GameObject estrella_11;
     public GameObject estrella_12;
+    public int cardStarCount = 0;
 
 
 
@@ -63,6 +65,8 @@ public class Dropdown_UI_card : MonoBehaviour
 
     public void tipo_atributo(int i)
     {
+        cardElementCount = i;
+        
         if (i == 0)
         {
             agua.SetActive(true);
@@ -137,6 +141,8 @@ public class Dropdown_UI_card : MonoBehaviour
 
     public void tipo_estrella(int i)
     {
+        cardStarCount = i;
+
         if (i == 0)
         {
             estrella_1.SetActive(true);
