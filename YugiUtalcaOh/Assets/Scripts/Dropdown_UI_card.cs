@@ -21,19 +21,9 @@ public class Dropdown_UI_card : MonoBehaviour
     public GameObject viento;
     public int cardElementCount = 0;
 
-    public GameObject estrella_1;
-    public GameObject estrella_2;
-    public GameObject estrella_3;
-    public GameObject estrella_4;
-    public GameObject estrella_5;
-    public GameObject estrella_6;
-    public GameObject estrella_7;
-    public GameObject estrella_8;
-    public GameObject estrella_9;
-    public GameObject estrella_10;
-    public GameObject estrella_11;
-    public GameObject estrella_12;
+    public List<GameObject> stars = new List<GameObject>();
     public int cardStarCount = 0;
+
 
 
 
@@ -139,189 +129,18 @@ public class Dropdown_UI_card : MonoBehaviour
         }
     }
 
-    public void tipo_estrella(int i)
+    public void StarType(int i)
     {
         cardStarCount = i;
+        ClearStars();
 
-        if (i == 0)
-        {
-            estrella_1.SetActive(true);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 1)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(true);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 2)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(true);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 3)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(true);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 4)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(true);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 5)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(true);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 6)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(true);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 7)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(true);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 8)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(true);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 9)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(true);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 10)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(true);
-            estrella_12.SetActive(false);
-        }
-        else if (i == 11)
-        {
-            estrella_1.SetActive(false);
-            estrella_2.SetActive(false);
-            estrella_3.SetActive(false);
-            estrella_4.SetActive(false);
-            estrella_5.SetActive(false);
-            estrella_6.SetActive(false);
-            estrella_7.SetActive(false);
-            estrella_8.SetActive(false);
-            estrella_9.SetActive(false);
-            estrella_10.SetActive(false);
-            estrella_11.SetActive(false);
-            estrella_12.SetActive(true);
-        }
+        for(int count = 0; count <= i; count++)
+            stars[count].SetActive(true);
+    }
+
+    public void ClearStars()
+    {
+        for (int i = 0; i < stars.Count; i++)
+            stars[i].SetActive(false);
     }
 }
