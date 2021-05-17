@@ -7,12 +7,13 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-    public Text inputFieldNameText, inputFieldDescriptionText, inputFieldAttackText, inputFieldDefenseText;
+    public Text inputFieldNameText, inputFieldDescriptionText, inputFieldAttackText, inputFieldDefenseText; 
     public GameObject UI_Card;
     public Image cardImage, starImage;
     public GameObject star;
-
-
+    public GameObject cardType, cardElement;
+    public List<GameObject> cardTypes, cardElements, cardStars;
+    public GameObject cardName, cardDescription, cardAttack, cardDefense;
 
     private string name, description;
     private int type, element, starAmount, attack, defense;
@@ -23,12 +24,26 @@ public class Card : MonoBehaviour
     void Start()
     {
         name = PlayerPrefs.GetString("CardName");
+        cardName.GetComponent<Text>().text = name;
+
         type = PlayerPrefs.GetInt("CardType");
+        cardType.GetComponent<Image>().sprite = cardTypes[type].GetComponent<Image>().sprite;
+        
         element = PlayerPrefs.GetInt("CardElement");
+        cardElement.GetComponent<Image>().sprite = cardElements[element].GetComponent<Image>().sprite;
+
         starAmount = PlayerPrefs.GetInt("CardStarAmount");
+        for (int i = 0; i <= starAmount; i++)
+            cardStars[i].SetActive(true);
+
         description = PlayerPrefs.GetString("CardDescription");
+        cardDescription.GetComponent<Text>().text = description;
+
         attack = PlayerPrefs.GetInt("CardAttack");
+        cardAttack.GetComponent<Text>().text = attack.ToString();
+
         defense = PlayerPrefs.GetInt("CardDefense");
+        cardDefense.GetComponent<Text>().text = defense.ToString();
 
         /*var imageBytes = File.ReadAllBytes(Application.persistentDataPath + "/Card/" + name + ".PNG");
         var texture2D = new Texture2D(256, 256);
