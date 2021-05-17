@@ -8278,6 +8278,7 @@ MonoBehaviour:
   cardDescription: {fileID: 945002165}
   cardAttack: {fileID: 1720070034}
   cardDefense: {fileID: 1939972317}
+  cardCharacter: {fileID: 1657675793}
 --- !u!1 &1492975096
 GameObject:
   m_ObjectHideFlags: 0

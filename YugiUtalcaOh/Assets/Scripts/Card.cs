@@ -13,7 +13,7 @@ public class Card : MonoBehaviour
     public GameObject star;
     public GameObject cardType, cardElement;
     public List<GameObject> cardTypes, cardElements, cardStars;
-    public GameObject cardName, cardDescription, cardAttack, cardDefense;
+    public GameObject cardName, cardDescription, cardAttack, cardDefense, cardCharacter;
 
     private string name, description;
     private int type, element, starAmount, attack, defense;
@@ -45,12 +45,12 @@ public class Card : MonoBehaviour
         defense = PlayerPrefs.GetInt("CardDefense");
         cardDefense.GetComponent<Text>().text = defense.ToString();
 
-        /*var imageBytes = File.ReadAllBytes(Application.persistentDataPath + "/Card/" + name + ".PNG");
+        var imageBytes = File.ReadAllBytes(Application.persistentDataPath + "/Card/" + name + ".PNG");
         var texture2D = new Texture2D(256, 256);
         texture2D.LoadRawTextureData(imageBytes);
         var sprite = Sprite.Create(texture2D, new Rect(0.0f, 0.0f, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f), 100.0f);
-        image.GetComponent<Image>().sprite = sprite;
-        Debug.Log(texture2D.name);*/
+        cardCharacter.GetComponent<Image>().sprite = sprite;
+
         
 
     }
@@ -80,7 +80,7 @@ public class Card : MonoBehaviour
         SaveCard();
 
         //starImage.sprite = starSprites[starAmount];
-        //image.GetComponent<Image>().sprite = cardImage.sprite;
+        cardCharacter.GetComponent<Image>().sprite = cardImage.sprite;
         
     }
 
