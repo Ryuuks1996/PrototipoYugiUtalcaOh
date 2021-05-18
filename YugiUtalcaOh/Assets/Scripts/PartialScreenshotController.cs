@@ -9,13 +9,15 @@ public class PartialScreenshotController : MonoBehaviour
     public RectTransform rectTransform;
     private int width, height;
 
-    public Camera mainCamera;
+    public GameObject mainCamera, cardCamera;
     private Texture2D texture2D;
-    private Camera cardCamera;
+    //private Camera cardCamera;
     
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         width = System.Convert.ToInt32(rectTransform.rect.width);
         height = System.Convert.ToInt32(rectTransform.rect.height);
 
@@ -50,7 +52,9 @@ public class PartialScreenshotController : MonoBehaviour
 
     public IEnumerator TakeScreenShot()
     {
-        yield return new WaitForEndOfFrame();
+        cardCamera.SetActive(true);
+        mainCamera.SetActive(false);
+              
         Vector2 temp = rectTransform.transform.position;
         var startX = temp.x - width / 2;
         var startY = temp.y - height / 2;
@@ -69,6 +73,13 @@ public class PartialScreenshotController : MonoBehaviour
 
         var timeStamp = DateTime.Now.ToString("yyyMMddHHmmssfff");
         File.WriteAllBytes(dirPath + name + ".PNG", bytes);
+
+
+        yield return new WaitForEndOfFrame();
+
+        mainCamera.SetActive(true);
+        cardCamera.SetActive(false);
+        
     }
 
 

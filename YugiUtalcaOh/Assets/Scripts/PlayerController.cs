@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public string name;
+    public string playerName;
     public int lifepoint;
     DeckController deck;
 
@@ -30,14 +30,14 @@ public class PlayerController : MonoBehaviour
 
         for (int i=0 ; i < playerHand_cant; i++)
         {
-            playerHand.Add(deck.getCard());
+            playerHand.Add(deck.GetCard());
         }
 
     }
 
-    public void drawCard()
+    public void DrawCard()
     {
-        playerHand.Add(deck.getCard());
+        playerHand.Add(deck.GetCard());
     }
 }
 

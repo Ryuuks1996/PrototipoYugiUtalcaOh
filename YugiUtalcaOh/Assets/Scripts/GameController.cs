@@ -7,7 +7,7 @@ public class GameController : MonoBehaviour
     PlayerController player;
     PlayerController enemy;
 
-    States currentState;
+    // States currentState;
 
     bool useCheck;
     // Start is called before the first frame update
@@ -31,8 +31,8 @@ public class GameController : MonoBehaviour
     void Phase1()
     {
 
-        player.drawCard();
-        currentState = States.phase2;
+        //player.drawCard();
+       // currentState = States.phase2;
     }
 
     void Phase2()
@@ -41,7 +41,7 @@ public class GameController : MonoBehaviour
         {
            
         }
-        currentState = States.phase3;
+        //currentState = States.phase3;
     }
     void Phase3()
     {
@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
         {
 
         }
-        currentState = States.phase4;
+        //currentState = States.phase4;
     }
 
     void Phase4()
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour
         {
 
         }
-        currentState = States.phase5;
+        //currentState = States.phase5;
     }
     void Phase5()
     {
@@ -66,7 +66,7 @@ public class GameController : MonoBehaviour
         {
 
         }
-        currentState = States.phase6;
+        //currentState = States.phase6;
     }
     void Phase6()
     {
@@ -74,12 +74,12 @@ public class GameController : MonoBehaviour
         {
 
         }
-        currentState = States.gamePause;
+        //currentState = States.gamePause;
     }
 
     void GamePause()
     {
-        currentState = States.gameStar;
+        //currentState = States.gameStar;
     }
 
     void useCard()

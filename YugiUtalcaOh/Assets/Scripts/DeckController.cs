@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class DeckController : MonoBehaviour
 {
-    public List<Card> card;
+    public  static List<Card> playerDeck = new List<Card>();  
+    //private int sizeDeck =30;
+
 
     void Start()
     {
-        
+
+        /*for (int i = 0; i < sizeDeck; i++)
+        {
+            var auxCard = new Card();
+            playerDeck.Add(auxCard);
+        }*/
     }
 
   
     void Update()
     {
-        
+        if (playerDeck[0] != null)
+          Debug.Log(playerDeck[0].nameCard);     
     }
 
-
     //cambiar luego
-    public Card getCard()
+   public Card GetCard()
     {
-        return card[0];
+        return playerDeck[0];
+    }
+
+    public void Shuffler () // para mezclar
+    {
+
     }
 }
