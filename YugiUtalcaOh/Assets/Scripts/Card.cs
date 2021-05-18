@@ -51,8 +51,6 @@ public class Card : MonoBehaviour
         var sprite = Sprite.Create(texture2D, new Rect(0.0f, 0.0f, texture2D.width, texture2D.height), new Vector2(0.5f, 0.5f), 100.0f);
         cardCharacter.GetComponent<Image>().sprite = sprite;
 
-        
-
     }
 
     // Update is called once per frame
@@ -86,7 +84,7 @@ public class Card : MonoBehaviour
 
     public void SaveCard()
     {
-        byte[] bytesArray = cardImage.sprite.texture.EncodeToPNG();
+        byte[] bytesArray = cardImage.sprite.texture.EncodeToPNG(); //change to full card image
         var dirPath = Application.persistentDataPath + "/Card/";
 
         if (!Directory.Exists(dirPath))
