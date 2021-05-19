@@ -15,10 +15,12 @@ public class SavedCard : MonoBehaviour
     public List<GameObject> cardTypes, cardElements, cardStars;
     public GameObject cardName, cardDescription, cardAttack, cardDefense, cardCharacter;
 
+    public GameObject button;
 
     public string title, description;
     public int type, element, starAmount, attack, defense;
 
+    
 
     public GameObject cardPanel;
     //private string path;
@@ -82,6 +84,14 @@ public class SavedCard : MonoBehaviour
         PlayerPrefs.SetInt("CardDefense", defense);
         SaveCardImage();
 
+        
+        UI_Card.SetActive(false);
+        
+        button.GetComponent<PartialScreenshotController>().
+               StartCoroutine(button.GetComponent<PartialScreenshotController>().TakeScreenShot());
+
+       
+
         //starImage.sprite = starSprites[starAmount];
         cardCharacter.GetComponent<Image>().sprite = cardImage.sprite;
 
@@ -89,6 +99,8 @@ public class SavedCard : MonoBehaviour
         DeckController.playerDeck.Add(auxCard);
 
         cardPanel.SetActive(true);
+ ;
+
     }
 
     public void SaveCardImage()
@@ -103,6 +115,12 @@ public class SavedCard : MonoBehaviour
         File.WriteAllBytes(dirPath + title + ".PNG", bytesArray);
         PlayerPrefs.SetString("DirPath", dirPath);
 
+    }
+
+    public void ActiveUICard()
+    {
+        UI_Card.SetActive(true);
+        Debug.Log("si entra");
     }
 
     

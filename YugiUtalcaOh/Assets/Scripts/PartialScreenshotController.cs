@@ -11,6 +11,9 @@ public class PartialScreenshotController : MonoBehaviour
 
     public GameObject mainCamera, cardCamera;
     private Texture2D texture2D;
+
+    public SavedCard saveCard;
+
     //private Camera cardCamera;
     
     // Start is called before the first frame update
@@ -44,17 +47,21 @@ public class PartialScreenshotController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+
+        /*if (Input.GetKeyDown(KeyCode.A))
         {
             StartCoroutine(TakeScreenShot()); // screenshot of a particular UI Element.
-        }
+        }*/
     }
+
+    
 
     public IEnumerator TakeScreenShot()
     {
         cardCamera.SetActive(true);
         mainCamera.SetActive(false);
-              
+
+      
         Vector2 temp = rectTransform.transform.position;
         var startX = temp.x - width / 2;
         var startY = temp.y - height / 2;
@@ -79,7 +86,10 @@ public class PartialScreenshotController : MonoBehaviour
 
         mainCamera.SetActive(true);
         cardCamera.SetActive(false);
-        
+      
+    
+       
+
     }
 
 
