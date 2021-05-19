@@ -20,7 +20,7 @@ public class SavedCard : MonoBehaviour
     public string title, description;
     public int type, element, starAmount, attack, defense;
 
-    
+    public bool isFinishSaved = false;
 
     public GameObject cardPanel;
     //private string path;
@@ -68,6 +68,7 @@ public class SavedCard : MonoBehaviour
 
     public void SavedCardInfo()
     {
+        
         title = inputFieldNameText.text;
         type = UI_Card.GetComponent<Dropdown_UI_card>().cardTypeCount;
         element = UI_Card.GetComponent<Dropdown_UI_card>().cardElementCount;
@@ -83,15 +84,9 @@ public class SavedCard : MonoBehaviour
         PlayerPrefs.SetInt("CardAttack", attack);
         PlayerPrefs.SetInt("CardDefense", defense);
         SaveCardImage();
-
         
         UI_Card.SetActive(false);
         
-        button.GetComponent<PartialScreenshotController>().
-               StartCoroutine(button.GetComponent<PartialScreenshotController>().TakeScreenShot());
-
-       
-
         //starImage.sprite = starSprites[starAmount];
         cardCharacter.GetComponent<Image>().sprite = cardImage.sprite;
 
@@ -99,7 +94,8 @@ public class SavedCard : MonoBehaviour
         DeckController.playerDeck.Add(auxCard);
 
         cardPanel.SetActive(true);
- ;
+
+        isFinishSaved = true;
 
     }
 

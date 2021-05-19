@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PartialScreenshotController : MonoBehaviour
 {
@@ -14,15 +15,24 @@ public class PartialScreenshotController : MonoBehaviour
 
     public SavedCard saveCard;
 
+    public GameObject button;
+
+    public UnityEvent onFinishSaved;
+
+
     //private Camera cardCamera;
     
     // Start is called before the first frame update
     void Start()
     {
-        
-        
+                
         width = System.Convert.ToInt32(rectTransform.rect.width);
         height = System.Convert.ToInt32(rectTransform.rect.height);
+
+        if (onFinishSaved == null)
+            onFinishSaved = new UnityEvent();
+
+        onFinishSaved.AddListener(Ping);
 
         /*cardCamera.gameObject.SetActive(true);
         mainCamera.gameObject.SetActive(false);
@@ -44,10 +54,16 @@ public class PartialScreenshotController : MonoBehaviour
         File.WriteAllBytes(dirPath + name + ".PNG", bytesArray);*/
     }
 
+    void Ping()
+    {
+        Debug.Log("-");
+    }
+
     // Update is called once per frame
     void Update()
     {
-
+        
+           
         /*if (Input.GetKeyDown(KeyCode.A))
         {
             StartCoroutine(TakeScreenShot()); // screenshot of a particular UI Element.
@@ -86,11 +102,8 @@ public class PartialScreenshotController : MonoBehaviour
 
         mainCamera.SetActive(true);
         cardCamera.SetActive(false);
-      
-    
-       
+        onFinishSaved.Invoke();
 
     }
-
 
 }
