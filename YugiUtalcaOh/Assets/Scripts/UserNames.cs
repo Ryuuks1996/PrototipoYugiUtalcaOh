@@ -11,8 +11,8 @@ public class UserNames : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        name1 = PlayerPrefs.GetString("UserName1");
-        name2 = PlayerPrefs.GetString("UserName2");
+        //name1 = PlayerPrefs.GetString("UserName1");
+        //name2 = PlayerPrefs.GetString("UserName2");
     }
 
     // Update is called once per frame
@@ -23,7 +23,10 @@ public class UserNames : MonoBehaviour
 
     public void SavedUserNames()
     {
-        PlayerPrefs.SetString("UserName1",player1.text.ToString());
-        PlayerPrefs.SetString("UserName2", player2.text.ToString());
+        name1 = player1.text.ToString();
+        name2 = player2.text.ToString();
+
+        //PlayerPrefs.SetString("UserName1",player1.text.ToString());
+        //PlayerPrefs.SetString("UserName2", player2.text.ToString());
     }
 }
