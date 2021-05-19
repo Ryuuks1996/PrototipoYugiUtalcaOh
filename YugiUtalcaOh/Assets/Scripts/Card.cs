@@ -7,8 +7,8 @@ public class Card : MonoBehaviour
     // Start is called before the first frame update
 
     public string nameCard;
-    private string descriptionCard;
-    private int typeCard, elementCard, starAmountCard, attackCard, defenseCard;
+    public string descriptionCard;
+    public int typeCard, elementCard, starAmountCard, attackCard, defenseCard;
 
     public  SavedCard savedCard;
 
