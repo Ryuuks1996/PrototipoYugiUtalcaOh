@@ -19,4 +19,9 @@ public class UIFunction : MonoBehaviour
     {
         SceneManager.LoadScene(goalSceneName);
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
