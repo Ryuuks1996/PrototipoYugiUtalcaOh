@@ -10,17 +10,17 @@ public class Card : MonoBehaviour
     public string descriptionCard;
     public int typeCard, elementCard, starAmountCard, attackCard, defenseCard;
 
-    public  SavedCard savedCard;
+    //public  SavedCard savedCard;
 
-     void Start()
+    void Start()
     {
 
-        nameCard = savedCard.title;
+        /*nameCard = savedCard.title;
         typeCard = savedCard.type;
         elementCard = savedCard.element;
         starAmountCard = savedCard.starAmount;
         descriptionCard = savedCard.description;
         attackCard = savedCard.attack;
-        defenseCard = savedCard.defense;
+        defenseCard = savedCard.defense;*/
     }
  }

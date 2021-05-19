@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class UserNames : MonoBehaviour
 {
     public Text player1, player2;
-    public string name1, name2;
+    public static string name1, name2;
 
     // Start is called before the first frame update
     void Start()
